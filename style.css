@@ -1,0 +1,90 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    background-image: linear-gradient(to right top, #845ec2, #7c80d8, #7d9fe7, #8dbbef, #abd5f5, #aed7f1, #b3d9ec, #b9dae8, #9bc7d8, #7db3c9, #5ca1b9, #368eaa);
+    height: 100vh;
+}
+
+.container .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.container .slider button {
+    border: none;
+    background-color: #7c80d8;
+    padding: 1.5rem 0.7rem ;
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.wrapper {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.wrapper:hover {
+    cursor: grab;
+}
+
+.wrapper.grabbing:hover{
+    cursor: grabbing;
+}
+
+.wrapper .items-container {
+    display: flex;
+    background-color: #368eaa;
+    transition: transform 300ms ease-in;
+}
+
+.wrapper .items-container .item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttons button {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4e4e4e;
+    cursor: pointer;
+    transition: background-color 250ms ease-in,
+                transform 250ms ease-in;
+}
+
+.buttons button.selected, .buttons button:hover:not(.selected) {
+    background-color: #999191;
+    transform: scale(1.4);
+}
+
